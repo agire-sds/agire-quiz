@@ -13,9 +13,9 @@ Application web pour quiz animés en direct. React + TypeScript + Vite, Supabase
 7. Installer Node.js 20+ ; lancer `npm install`, puis `npm run dev`.
 8. Ouvrir `http://localhost:5173`, se connecter depuis **Administration**, créer un quiz et lancer une partie.
 
-## GitHub / Vercel
+## GitHub Pages
 
-Créer un dépôt GitHub **privé**, envoyer les fichiers (ne jamais committer `.env.local`). Importer le dépôt dans Vercel, framework Vite, build `npm run build`, output `dist`. Configurer les deux variables `VITE_SUPABASE_URL` et `VITE_SUPABASE_ANON_KEY` dans Vercel puis déployer.
+L'application est configuree pour GitHub Pages sous `/agire-quiz/` et utilise les routes `#/...`. Suivre **GITHUB-PAGES-INSTALLATION.md** pour les secrets GitHub Actions, le deploiement et la fonction Supabase.
 
 ## Fonctionnement
 
