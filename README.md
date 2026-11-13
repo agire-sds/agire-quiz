@@ -42,4 +42,4 @@ Les clés `service_role` restent exclusivement dans les secrets Supabase Edge Fu
 
 ## Mode Code de la route
 
-Le nouveau mode se trouve dans **Administration > Bibliothèque Code de la route**. Le nombre de diapositives (1 à 40) se choisit lors de la création de la série. Lire `DEPLOIEMENT-CODE-DE-LA-ROUTE.md` avant le déploiement : les migrations `002_road_quiz.sql` et `003_road_multiple_answers.sql` et la fonction `road-api` sont indispensables.
+Le nouveau mode se trouve dans **Administration > Bibliothèque Code de la route**. Le nombre de diapositives (1 à 40) se choisit lors de la création de la série. Lire `DEPLOIEMENT-CODE-DE-LA-ROUTE.md` avant le déploiement : les migrations `002_road_quiz.sql` et `003_road_multiple_answers.sql`, `004_road_auto_save.sql` et la fonction `road-api` sont indispensables.
