@@ -18,3 +18,5 @@
 .poll-scale{grid-template-columns:repeat(5,1fr)}
 @media(max-width:600px){.poll-choices{grid-template-columns:1fr}.poll-scale{grid-template-columns:repeat(5,1fr)}}
 .poll-text-form textarea{width:100%;min-height:130px;font-size:22px;line-height:1.4;border:2px solid #668fba;padding:16px}.poll-text-form button{display:block;width:100%;min-height:60px;margin:14px 0 0}
+
+.poll-projector .quiz-media{max-height:40vh}
