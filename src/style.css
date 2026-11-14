@@ -5,3 +5,4 @@
 .brand{display:inline-flex;align-items:center;gap:10px;padding:4px 8px;background:white}.brand img{display:block;width:auto;height:54px;max-width:180px;object-fit:contain}.brand span{font-size:24px}.hero-title{display:flex;align-items:center;justify-content:center;gap:18px}.hero-title img{display:block;width:min(58vw,340px);height:auto}.hero-title span{color:#18784e;font-weight:900}@media(max-width:550px){.brand img{height:42px;max-width:145px}.brand span{font-size:20px}.hero-title{flex-direction:column;gap:0}}
 
 .quiz-media{display:block;max-width:100%;max-height:45vh;object-fit:contain;margin:16px auto;border-radius:10px}
+.user-list{display:grid;gap:8px;margin-top:18px}.user-list>div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px;border-bottom:1px solid #dce4ed}.user-list span{overflow-wrap:anywhere}
