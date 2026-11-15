@@ -1,0 +1,7 @@
+.quiz-logo{display:block;width:160px;height:auto;object-fit:contain}
+.hero-title .quiz-logo{width:min(72vw,360px);max-width:none}
+.quiz-logo-player{width:135px;margin:0 auto 12px}
+.quiz-logo-host{width:170px;margin:0 auto 8px}
+.quiz-logo-projector{width:160px;margin:0 auto 14px;padding:7px 10px;background:#fff;border-radius:10px;box-sizing:content-box}
+.classic-stage-heading .quiz-logo{width:160px;margin:0 auto 8px}
+.classic-projector .classic-stage-heading .quiz-logo{padding:7px 10px;background:#fff;border-radius:10px;box-sizing:content-box}
