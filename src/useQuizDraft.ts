@@ -1,7 +1,7 @@
 import {useEffect,useRef,useState} from 'react';
 import type {SupabaseClient} from '@supabase/supabase-js';
 
-export function useQuizDraft<T>(db:SupabaseClient, userId:string, kind:'road'|'poll'|'classic', quizId:string|null, value:T, restore:(value:T)=>void){
+export function useQuizDraft<T>(db:SupabaseClient, userId:string, kind:'road'|'poll'|'classic'|'brainstorm', quizId:string|null, value:T, restore:(value:T)=>void){
   const key=`agire-draft:${userId}:${kind}:${quizId||'new'}`;
   const [ready,setReady]=useState(false);
   const [hasDraft,setHasDraft]=useState(false);
