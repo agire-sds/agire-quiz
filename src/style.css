@@ -46,7 +46,8 @@
 .classic-slider-editor{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}.classic-slider{display:grid;gap:14px;justify-items:center;margin:25px auto}.classic-slider input{width:min(100%,520px)}.classic-slider strong{font-size:32px}
 
 .field-with-help{display:flex;align-items:flex-end;gap:.55rem;max-width:100%}
-.field-with-help>label{flex:1;min-width:0}
+.field-with-help>label{flex:0 1 auto;min-width:0}
+.field-with-help select,select{width:fit-content;max-width:100%}
 .pin-zone-editor .field-with-help>.actions{flex:1;min-width:0}
 .field-with-help>.field-help{margin:0 0 13px;flex:none}
 .field-help{display:inline-block;vertical-align:middle;margin:.25rem 0 .7rem .5rem;position:relative}
