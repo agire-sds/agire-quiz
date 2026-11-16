@@ -79,6 +79,15 @@
 .road-host{max-width:920px;margin:0 auto}
 .road-host h1{margin:18px 0}
 .road-host>button{margin:4px 0 14px}
+.road-player-review .road-media{max-width:100%;max-height:48vh}
+.road-player-review .actions{justify-content:center;margin-top:18px}
+.road-review-legend{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:14px 0}
+.road-review-legend span{padding:5px 10px;border-radius:6px}
+.road-review-legend .chosen{outline:3px solid #286fc2;outline-offset:2px}
+.road-review-legend .correct{background:#c8f0d7;color:#125b39}
+.road-review-questions{display:grid;gap:18px}
+.road-review-questions h3{margin:0 0 8px}
+.road-review-option.chosen{outline:3px solid #286fc2;outline-offset:2px}
 .quiz-preview-road .quiz-preview-content{display:none}
 .road-questions>div{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
 .road-questions>div>h3{flex-basis:100%;margin:0 0 4px}
