@@ -75,6 +75,10 @@
 .road-correction-options span{display:inline-block;padding:8px 16px;border:2px solid #cbd6e1;border-radius:8px;background:#fff;font-weight:700}
 .road-correction-options span.correct{border-color:#18784e;background:#c8f0d7;color:#125b39}
 .road-projector .road-correction-answers{font-size:clamp(18px,2.4vw,32px)}
+.road-host-shell footer{display:none}
+.road-host{max-width:920px;margin:0 auto}
+.road-host h1{margin:18px 0}
+.road-host>button{margin:4px 0 14px}
 .quiz-preview-road .quiz-preview-content{display:none}
 .road-questions>div{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
 .road-questions>div>h3{flex-basis:100%;margin:0 0 4px}
