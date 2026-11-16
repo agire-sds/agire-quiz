@@ -9,7 +9,7 @@ export function hostPath(kind:QuizKind,id:string){return kind==='classic'?`#/hos
 export function projectorPath(kind:QuizKind,id:string){return kind==='classic'?`#/projector/${id}`:`#/${kind}/projector/${id}`}
 
 export async function launchPreparation(prep:LaunchablePreparation,session:Session,db:SupabaseClient,url:string,key:string,onError:(message:string)=>void){
-  const projection=prep.screen==='projector'?openProjectorWindow('agire-projector'):null;
+  const projection=prep.screen==='projector'?openProjectorWindow('agire-projector','',onError):null;
   try{
     const endpoint=prep.kind==='classic'?'game-api':`${prep.kind}-api`;
     const game=await postQuizApi(url,key,endpoint,'create',{quizId:prep.quiz_id,seriesId:prep.quiz_id,preparationId:prep.id},session,db);
