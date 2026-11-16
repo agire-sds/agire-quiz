@@ -62,3 +62,6 @@
 .quiz-row-actions{display:flex;align-items:center;gap:8px;flex:none}.quiz-row-actions button{white-space:nowrap}
 .icon-action{display:inline-grid;place-items:center;width:40px;height:40px;padding:0;font-size:20px;line-height:1}
 @media(max-width:620px){.quiz-row{align-items:flex-start;flex-direction:column}.quiz-row-actions{width:100%}.quiz-row-actions .primary{margin-right:auto}}
+.road-projector .road-media{max-height:78vh;max-width:94vw}
+.road-correction-stats{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:clamp(16px,2vw,26px)}
+.quiz-preview-road .quiz-preview-content{display:none}
