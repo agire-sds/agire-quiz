@@ -65,3 +65,8 @@
 .road-projector .road-media{max-height:78vh;max-width:94vw}
 .road-correction-stats{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:clamp(16px,2vw,26px)}
 .quiz-preview-road .quiz-preview-content{display:none}
+.road-questions>div{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
+.road-questions>div>h3{flex-basis:100%;margin:0 0 4px}
+.road-questions .road-option{display:flex;align-items:center;justify-content:center;gap:5px;flex:1 1 0;min-width:52px;min-height:52px;margin:0;padding:8px 6px;text-align:center;border:2px solid #cbd6e1;border-radius:9px;background:white;cursor:pointer}
+.road-questions .road-option input[type=checkbox],.road-questions .road-option input[type=radio]{display:inline-block;width:18px;height:18px;flex:none;margin:0}
+.road-questions .road-option.selected{border-color:#18784e;background:#e4f6ec}
