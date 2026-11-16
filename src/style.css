@@ -64,6 +64,17 @@
 @media(max-width:620px){.quiz-row{align-items:flex-start;flex-direction:column}.quiz-row-actions{width:100%}.quiz-row-actions .primary{margin-right:auto}}
 .road-projector .road-media{max-height:78vh;max-width:94vw}
 .road-correction-stats{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:clamp(16px,2vw,26px)}
+.road-question-header{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;margin:0 0 14px}
+.road-question-header h2{margin:0}
+.road-question-header .clock{flex:none}
+.road-correction-answers{display:grid;gap:16px;margin:18px auto;max-width:920px}
+.road-correction-question{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px}
+.road-correction-question h3,.road-correction-question p{margin:0}
+.road-correction-question p{flex-basis:100%;text-align:center;font-weight:700}
+.road-correction-options{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+.road-correction-options span{display:inline-block;padding:8px 16px;border:2px solid #cbd6e1;border-radius:8px;background:#fff;font-weight:700}
+.road-correction-options span.correct{border-color:#18784e;background:#c8f0d7;color:#125b39}
+.road-projector .road-correction-answers{font-size:clamp(18px,2.4vw,32px)}
 .quiz-preview-road .quiz-preview-content{display:none}
 .road-questions>div{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
 .road-questions>div>h3{flex-basis:100%;margin:0 0 4px}
