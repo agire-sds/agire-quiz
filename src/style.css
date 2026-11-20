@@ -129,6 +129,9 @@
 .road-review-questions{display:grid;gap:18px}
 .road-review-questions h3{margin:0 0 8px}
 .road-review-option.chosen{outline:3px solid #286fc2;outline-offset:2px}
+.road-correction-options .road-review-option.answer-correct{border-color:#18784e;background:#c8f0d7;color:#125b39}
+.road-correction-options .road-review-option.answer-wrong{border-color:#ba3038;background:#ffdddd;color:#8d1920}
+.road-correction-options .road-review-option.expected{border-color:#cbd6e1;background:#fff;color:#18784e}
 .quiz-preview-road .quiz-preview-content{display:none}
 .road-questions>div{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
 .road-questions>div>h3{flex-basis:100%;margin:0 0 4px}
