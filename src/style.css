@@ -133,6 +133,13 @@
 .road-correction-options .road-review-option.answer-wrong{border-color:#ba3038;background:#ffdddd;color:#8d1920}
 .road-correction-options .road-review-option.expected{border-color:#cbd6e1;background:#fff;color:#18784e}
 .road-correction-options span.correct,.road-correction-options .road-review-option.answer-correct,.road-correction-options .road-review-option.expected{font-weight:900}
+.road-correction-question{flex-direction:column;align-items:stretch;gap:7px}
+.road-correction-question h3{font-size:17px;margin:0}
+.road-correction-options{display:grid;grid-template-columns:1fr;justify-content:stretch;width:100%;gap:6px}
+.road-correction-options span{display:block;width:100%;padding:6px 10px;font-size:16px;text-align:left}
+.road-correction-question p{font-size:15px}
+.road-projector .road-correction-answers{font-size:18px}
+.road-projector .road-correction-options span{font-size:clamp(17px,1.6vw,23px)}
 .quiz-preview-road .quiz-preview-content{display:none}
 .road-questions>div{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
 .road-questions>div>h3{flex-basis:100%;margin:0 0 4px}
