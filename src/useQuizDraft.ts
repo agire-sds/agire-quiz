@@ -47,6 +47,16 @@ export function useQuizDraft<T>(db:SupabaseClient, userId:string, kind:'road'|'p
     timerRef.current=timer;
     return()=>clearTimeout(timer);
   },[db,key,ready,serialized,userId]);
+  const saveNow=async()=>{
+    if(!ready)return;
+    if(timerRef.current)clearTimeout(timerRef.current);
+    const snapshot=current.current;
+    const updatedAt=new Date().toISOString();
+    try{localStorage.setItem(key,JSON.stringify({data:snapshot,updatedAt}))}catch{setStatus('offline')}
+    setStatus('saving');
+    const {error}=await db.from('quiz_editor_drafts').upsert({owner_id:userId,draft_key:key,content:snapshot,updated_at:updatedAt},{onConflict:'owner_id,draft_key'});
+    setStatus(error?'offline':'saved');
+  };
   const clear=async()=>{
     cleared.current=true;
     clearedValue.current=JSON.stringify(current.current);
@@ -54,5 +64,5 @@ export function useQuizDraft<T>(db:SupabaseClient, userId:string, kind:'road'|'p
     localStorage.removeItem(key);
     await db.from('quiz_editor_drafts').delete().eq('owner_id',userId).eq('draft_key',key);
   };
-  return {ready,hasDraft,status,clear};
+  return {ready,hasDraft,status,saveNow,clear};
 }

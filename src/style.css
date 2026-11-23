@@ -179,6 +179,9 @@
 .road-drop-zone:focus{outline:3px solid #18784e;outline-offset:2px}
 .road-drop-zone label{margin:0;cursor:pointer}
 .road-drop-zone p{margin:8px 0 0}
+.road-checkpoints{margin:12px 0;padding:10px 14px;border:1px solid #dce4ed;border-radius:8px;background:#f8fafc}
+.road-checkpoints summary{cursor:pointer;font-weight:700}
+.road-checkpoints .actions{margin-top:10px}
 .road-audio-editor{margin:16px 0;padding:16px;border:1px solid #d9e3e9;border-radius:10px;background:#f8fbf9}
 .road-audio-editor h3{margin:0 0 10px}
 .road-audio-editor audio{display:block;width:min(100%,520px);margin-top:12px}
