@@ -146,6 +146,11 @@
 .road-questions .road-option{display:flex;align-items:center;justify-content:center;gap:5px;flex:1 1 0;min-width:52px;min-height:52px;margin:0;padding:8px 6px;text-align:center;border:2px solid #cbd6e1;border-radius:9px;background:white;cursor:pointer}
 .road-questions .road-option input[type=checkbox],.road-questions .road-option input[type=radio]{display:inline-block;width:18px;height:18px;flex:none;margin:0}
 .road-questions .road-option.selected{border-color:#18784e;background:#e4f6ec}
+.road-questions .road-option.locked{color:#66717d;border-color:#d5dce3;background:#e9edf1;cursor:not-allowed}
+.road-questions .road-option.locked input{opacity:.55}
+.road-player-review .road-review-questions>div{padding:14px;background:#f5f8fb;border-radius:10px}
+.road-player-review .road-correction-options{display:flex;flex-wrap:wrap;justify-content:stretch;gap:8px}
+.road-player-review .road-correction-options span{display:flex;align-items:center;justify-content:center;flex:1 1 0;min-width:52px;min-height:52px;padding:8px 6px;text-align:center}
 .road-audio-editor{margin:16px 0;padding:16px;border:1px solid #d9e3e9;border-radius:10px;background:#f8fbf9}
 .road-audio-editor h3{margin:0 0 10px}
 .road-audio-editor audio{display:block;width:min(100%,520px);margin-top:12px}
