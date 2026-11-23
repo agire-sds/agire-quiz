@@ -151,6 +151,29 @@
 .road-player-review .road-review-questions>div{padding:14px;background:#f5f8fb;border-radius:10px}
 .road-player-review .road-correction-options{display:flex;flex-wrap:wrap;justify-content:stretch;gap:8px}
 .road-player-review .road-correction-options span{display:flex;align-items:center;justify-content:center;flex:1 1 0;min-width:52px;min-height:52px;padding:8px 6px;text-align:center}
+.road-lobby-actions{justify-content:center;align-items:center}
+.road-demo{text-align:center;max-width:1100px;margin:0 auto}
+.road-demo h2{font-size:clamp(24px,3vw,42px);margin:0 0 1vh}
+.road-demo-pair{display:flex;justify-content:center;align-items:start;gap:clamp(18px,5vw,100px)}
+.road-demo-pair>div{width:min(30vw,350px)}
+.road-demo-pair h3{font-size:clamp(18px,2vw,28px);margin:0 0 1vh}
+.road-demo-phone{background:#141a24;border:6px solid #303946;border-radius:28px;padding:8px;box-shadow:0 14px 28px #0007;text-align:center;color:#16253a}
+.road-demo-speaker{width:24%;height:5px;border-radius:10px;background:#68717d;margin:0 auto 8px}
+.road-demo-screen{background:#fff;border-radius:15px;padding:9px;display:grid;gap:7px}
+.road-demo-logo img{display:block;width:74px;max-height:42px;object-fit:contain;margin:auto}
+.road-demo-screen>strong{font-size:clamp(15px,1.4vw,20px)}
+.road-demo-illustration{display:block;width:100%;height:min(18vh,150px);border-radius:8px}
+.road-demo-question{font-weight:800;margin:2px 0;font-size:clamp(14px,1.5vw,20px)}
+.road-demo-mode{font-size:clamp(12px,1.2vw,16px);margin:0;font-weight:700}
+.road-demo-options{display:flex;gap:7px}
+.road-demo-options>div{flex:1;min-width:0;border:2px solid #cbd6e1;border-radius:8px;padding:9px 3px;font-size:clamp(12px,1.2vw,17px);font-weight:700;color:#111827}
+.road-demo-options>div.locked{background:#e9edf1;color:#aab4be}
+.road-demo-options>div.chosen{background:#e4f6ec;border-color:#18784e}
+.road-demo-radio{display:inline-block;width:13px;height:13px;border:2px solid currentColor;border-radius:50%;vertical-align:-1px}
+.road-demo-options .chosen .road-demo-radio{background:#18784e;border-color:#18784e;box-shadow:inset 0 0 0 2px white}
+.road-demo-validate{background:#18784e;color:white;font-weight:800;font-size:clamp(12px,1.2vw,17px);padding:9px}
+.road-demo-validate:disabled{background:#d1d7dd;border-color:#d1d7dd;color:#aab4be;opacity:1}
+@media(max-width:700px){.road-demo-pair{gap:8px}.road-demo-pair>div{width:47vw}.road-demo-phone{border-width:3px;border-radius:15px;padding:4px}.road-demo-screen{padding:5px;gap:4px}.road-demo-options{gap:3px}.road-demo-options>div{font-size:11px;padding:5px 2px}.road-demo-validate{padding:5px}}
 .road-audio-editor{margin:16px 0;padding:16px;border:1px solid #d9e3e9;border-radius:10px;background:#f8fbf9}
 .road-audio-editor h3{margin:0 0 10px}
 .road-audio-editor audio{display:block;width:min(100%,520px);margin-top:12px}
