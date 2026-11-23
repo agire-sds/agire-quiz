@@ -6,6 +6,10 @@ export function useQuizDraft<T>(db:SupabaseClient, userId:string, kind:'road'|'p
   const [ready,setReady]=useState(false);
   const [hasDraft,setHasDraft]=useState(false);
   const [status,setStatus]=useState<'local'|'saving'|'saved'|'offline'>('local');
+  const historyKey=`${key}:history`;
+  const [history,setHistory]=useState<{data:T;updatedAt:string}[]>(()=>{try{return JSON.parse(localStorage.getItem(historyKey)||'[]')}catch{return []}});
+  const historyRef=useRef(history);
+  historyRef.current=history;
   const current=useRef(value);
   const timerRef=useRef<ReturnType<typeof setTimeout>|null>(null);
   const cleared=useRef(false);
@@ -31,6 +35,7 @@ export function useQuizDraft<T>(db:SupabaseClient, userId:string, kind:'road'|'p
     void load();
     return()=>{active=false};
   },[db,key,userId]);
+  useEffect(()=>{try{setHistory(JSON.parse(localStorage.getItem(historyKey)||'[]'))}catch{setHistory([])}},[historyKey]);
   const serialized=JSON.stringify(value);
   useEffect(()=>{
     if(!ready)return;
@@ -57,6 +62,25 @@ export function useQuizDraft<T>(db:SupabaseClient, userId:string, kind:'road'|'p
     const {error}=await db.from('quiz_editor_drafts').upsert({owner_id:userId,draft_key:key,content:snapshot,updated_at:updatedAt},{onConflict:'owner_id,draft_key'});
     setStatus(error?'offline':'saved');
   };
+  const checkpoint=()=>{
+    if(!ready)return;
+    const saved={data:structuredClone(current.current),updatedAt:new Date().toISOString()};
+    const next=[saved,...historyRef.current].slice(0,10);
+    try{localStorage.setItem(historyKey,JSON.stringify(next));setHistory(next)}catch{setStatus('offline')}
+    historyRef.current=next;
+    void saveNow();
+  };
+  useEffect(()=>{
+    if(!ready||kind==='road')return;
+    const timer=setInterval(()=>{
+      if(JSON.stringify(current.current)!==JSON.stringify(historyRef.current[0]?.data))checkpoint();
+    },30000);
+    return()=>clearInterval(timer);
+  },[ready,key,kind]);
+  const restoreCheckpoint=(position:number)=>{
+    const saved=history[position];
+    if(saved)restoreRef.current(structuredClone(saved.data));
+  };
   const clear=async()=>{
     cleared.current=true;
     clearedValue.current=JSON.stringify(current.current);
@@ -64,5 +88,5 @@ export function useQuizDraft<T>(db:SupabaseClient, userId:string, kind:'road'|'p
     localStorage.removeItem(key);
     await db.from('quiz_editor_drafts').delete().eq('owner_id',userId).eq('draft_key',key);
   };
-  return {ready,hasDraft,status,saveNow,clear};
+  return {ready,hasDraft,status,history,checkpoint,restoreCheckpoint,saveNow,clear};
 }
